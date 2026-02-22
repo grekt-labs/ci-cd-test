@@ -21,7 +21,7 @@ jobs:
           node-version: "22"
 
       - name: Install grekt
-        run: npm install -g @grekt-labs/cli
+        run: npm install -g @grekt/cli
 
       - name: Install artifacts
         run: grekt install
