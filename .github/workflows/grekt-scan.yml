@@ -21,7 +21,9 @@ jobs:
           node-version: "22"
 
       - name: Configure GitHub Packages registry
-        run: echo "${{ secrets.GREKT_PACKAGES_NPMRC }}" >> ~/.npmrc
+        run: |
+          echo "@grekt-labs:registry=https://npm.pkg.github.com" >> ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GREKT_PACKAGES_NPMRC }}" >> ~/.npmrc
 
       - name: Install grekt
         run: npm install -g @grekt/cli
