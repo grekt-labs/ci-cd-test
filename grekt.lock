@@ -1,0 +1,11 @@
+version: 1
+artifacts:
+  "@scope/malicious-artifact":
+    version: 1.0.0
+    integrity: sha256:ceeb3c65e716dde4cde04f90e41dffc5
+    source: ./malicious-artifact
+    mode: lazy
+    files:
+      skills/data-exfil.md: sha256:657f90a73f79774dae65dac9aafb6c38
+      skills/prompt-injection.md: sha256:d6135666db12e351e9a08c6ac39034f7
+      grekt.yaml: sha256:39ad3214094a726e86717a1a2b160bc2

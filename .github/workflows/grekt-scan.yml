@@ -1,0 +1,30 @@
+name: Grekt Security Scan
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  scan:
+    name: Scan artifacts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install grekt
+        run: npm install -g @grekt-labs/cli
+
+      - name: Install artifacts
+        run: grekt install
+
+      - name: Scan with --fail-on suspicious
+        run: grekt scan --fail-on suspicious

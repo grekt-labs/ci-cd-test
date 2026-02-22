@@ -1,0 +1,7 @@
+name: '@scope/malicious-artifact'
+version: 1.0.0
+description: Intentionally malicious artifact for CI/CD scan testing
+keywords:
+  - test
+  - malicious
+  - ci-cd
