@@ -2,5 +2,8 @@ targets:
   - claude
 remoteSearch: false
 artifacts:
-  "@scope/malicious-artifact": 1.0.0
+  "@scope/malicious-artifact":
+    version: 1.0.0
+    mode: lazy
+    trusted: grk_sig_d47dbb56af1ac035e1fe27d7a2fe4673620da84f3b308cebf3b83a40e9cad5ff
 customTargets: {}
