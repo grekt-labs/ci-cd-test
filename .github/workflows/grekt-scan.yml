@@ -33,3 +33,5 @@ jobs:
 
       - name: Scan with --fail-on suspicious
         run: grekt scan --fail-on suspicious
+        env:
+          GREKT_TRUST_KEY: ${{ secrets.GREKT_TRUST_KEY }}
